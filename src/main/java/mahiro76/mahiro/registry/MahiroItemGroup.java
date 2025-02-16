@@ -55,10 +55,10 @@ public class MahiroItemGroup {
             new Identifier(Mahiro.MOD_ID, "food"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.mahiro.food"))
-                    .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
+                    .icon(() -> new ItemStack(MahiroItems.CHOCOLATE))//使用巧克力作为图标
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
-                        entries.add(MahiroItems.CHOCOLATE);
+                        entries.add(MahiroItems.CHOCOLATE);//将巧克力添加到食品物品类
                     }).build());
 
     // 启动初始化方法
