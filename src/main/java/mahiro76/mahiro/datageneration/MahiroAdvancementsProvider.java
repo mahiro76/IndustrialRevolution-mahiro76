@@ -1,6 +1,6 @@
 package mahiro76.mahiro.datageneration;
 
-import mahiro76.mahiro.Advancements.Advancements;
+import mahiro76.mahiro.advancements.Advancements;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricAdvancementProvider;
 import net.minecraft.advancement.AdvancementEntry;

@@ -1,4 +1,4 @@
-package mahiro76.mahiro.Advancements;
+package mahiro76.mahiro.advancements;
 
 import mahiro76.mahiro.registry.MahiroItems;
 import net.minecraft.advancement.Advancement;
