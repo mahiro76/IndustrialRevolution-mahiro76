@@ -18,6 +18,9 @@
 		"main": [
 			"mahiro76.mahiro.Mahiro"
 		],
+		"client": [
+			"mahiro76.mahiro.MahiroClient"
+		],
 		"fabric-datagen": [
 			"mahiro76.mahiro.datageneration.DataGeneration"
 		]

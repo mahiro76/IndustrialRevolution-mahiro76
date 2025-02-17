@@ -64,7 +64,7 @@ public class MahiroItemGroup {
                         //在此处添加物品
                         entries.add(MahiroItems.CHOCOLATE);
                         entries.add(MahiroItems.ORANGE);
-                        entries.add(MahiroItems.BAD_ORANGE);
+                        entries.add(MahiroItems.ROTTEN_ORANGE);
 
                     }).build());
 
@@ -73,7 +73,7 @@ public class MahiroItemGroup {
             new Identifier(Mahiro.MOD_ID, "crop"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.mahiro.crop"))
-                    .icon(() -> new ItemStack(MahiroBlocks.OrangeBlock))//使用橘子作为图标
+                    .icon(() -> new ItemStack(MahiroItems.ORANGE_SEEDS))//使用橘子作为图标
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
                         entries.add(MahiroItems.ORANGE_SEEDS);

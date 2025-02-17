@@ -26,7 +26,6 @@ public class Mahiro implements ModInitializer {
 		/// FuelRegistry.INSTANCE.add(MahiroItems.CRUTCH, 300);
 		///}
 		LOGGER.info("mahiro run successfully!");
-		MahiroClient.registerMahiroClient();
 		MahiroItemGroup.registerModItemGroup();
 		MahiroItems.registerMahiroItems();
 		MahiroBlocks.registerMahiroBlocks();

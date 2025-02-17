@@ -11,9 +11,9 @@ import net.minecraft.world.World;
 
 import java.util.List;
 
-public class BadOrange extends Item{
+public class RottenOrange extends Item{
 
-    public BadOrange(Settings settings) {
+    public RottenOrange(Settings settings) {
         super(settings.food(new FoodComponent.Builder()
                 .hunger(5)
                 .saturationModifier(1.0f)
@@ -28,6 +28,7 @@ public class BadOrange extends Item{
     //覆写方法，添加物品提示文本
     @Override
     public void appendTooltip(ItemStack stack, World world, List<Text> tooltip, TooltipContext context) {
-        tooltip.add(Text.translatable("item.mahiro.bad_orange.tips"));
+        tooltip.add(Text.translatable("item.mahiro.rotten_orange.tips"));
     }
+
 }

@@ -20,7 +20,7 @@ public class MahiroItems {
     //添加橙子
     public static final Item ORANGE = registerItem("orange", new Orange(new Item.Settings()));
     //添加坏橙子
-    public static final Item BAD_ORANGE = registerItem("bad_orange", new BadOrange(new Item.Settings()));
+    public static final Item ROTTEN_ORANGE = registerItem("rotten_orange", new RottenOrange(new Item.Settings()));
 
 
     //添加物品辅助方法

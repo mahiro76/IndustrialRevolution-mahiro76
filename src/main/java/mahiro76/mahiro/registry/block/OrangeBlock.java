@@ -30,7 +30,7 @@ public class OrangeBlock extends PlantBlock implements Fertilizable {
     private static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(3.0, 0.0, 3.0, 13.0, 8.0, 13.0);
     private static final VoxelShape LARGE_SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
 
-    public OrangeBlock(AbstractBlock.Settings settings) {
+    public OrangeBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }
@@ -72,7 +72,16 @@ public class OrangeBlock extends PlantBlock implements Fertilizable {
             return ActionResult.PASS;
         } else if (i > 1) {
             int j = 1 + world.random.nextInt(2);
-            dropStack(world, pos, new ItemStack(MahiroItems.ORANGE, j + (bl ? 1 : 0)));
+            // 添加掉落烂橙子的几率
+            if (world.random.nextFloat() < 0.05) { // 5% 的几率掉落烂橙子
+                dropStack(world, pos, new ItemStack(MahiroItems.ROTTEN_ORANGE, j + (bl ? 1 : 0)));
+            } else {
+                if (world.random.nextFloat() <= 0.6) {
+                    dropStack(world, pos, new ItemStack(MahiroItems.ORANGE_SEEDS,1));
+                }
+                dropStack(world, pos, new ItemStack(MahiroItems.ORANGE, j + (bl ? 1 : 0)));
+
+            }
             world.playSound(null, pos, SoundEvents.BLOCK_SWEET_BERRY_BUSH_PICK_BERRIES, SoundCategory.BLOCKS, 1.0F, 0.8F + world.random.nextFloat() * 0.4F);
             BlockState blockState = state.with(AGE, 1);
             world.setBlockState(pos, blockState, Block.NOTIFY_LISTENERS);

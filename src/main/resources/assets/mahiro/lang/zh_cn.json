@@ -1,10 +1,10 @@
 {
+  "advancement.mahiro.chocolate": "卡路里炸弹！",
+  "advancement.mahiro.chocolate.description": "获得一块巧克力。",
   "advancement.mahiro.crutch": "爷爷的拐杖",
   "advancement.mahiro.crutch.description": "获得一根拐杖",
   "advancement.mahiro.poisonous_wolf": "哎，有毒！",
   "advancement.mahiro.poisonous_wolf.description": "小心！对于狗来说，巧克力是剧毒的!",
-  "advancement.mahiro.chocolate": "卡路里炸弹！",
-  "advancement.mahiro.chocolate.description": "获得一块巧克力。",
 
 
 
@@ -14,6 +14,12 @@
   "item.mahiro.crutch.tips": "§6爷爷留下的一根破旧拐杖,或许有着奇特的效果？",
   "item.mahiro.hardener": "硬化剂",
   "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。",
+  "item.mahiro.orange": "橙子",
+  "item.mahiro.orange.tips": "§6橙子！解渴又好吃！",
+  "item.mahiro.orange_seeds": "橙子种子",
+  "item.mahiro.orange_seeds.tips": "§6种下他，你会得到一株橙子树。",
+  "item.mahiro.rotten_orange": "坏掉的橙子",
+  "item.mahiro.rotten_orange.tips": "§6这是什么？吃吃看就知道了。",
 
 
 

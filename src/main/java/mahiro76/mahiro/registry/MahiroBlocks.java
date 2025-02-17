@@ -21,6 +21,7 @@ public class MahiroBlocks {
             "orange_block",
             new OrangeBlock(
                     AbstractBlock.Settings.create()
+                            .mapColor(MapColor.DARK_GREEN)
                             .ticksRandomly()
                             .noCollision()
                             .sounds(BlockSoundGroup.SWEET_BERRY_BUSH)

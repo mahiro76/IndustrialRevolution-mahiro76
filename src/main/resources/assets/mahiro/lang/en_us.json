@@ -1,23 +1,29 @@
 {
-  "advancement.mahiro.crutch": "Crutches from grandpa!",
-  "advancement.mahiro.crutch.description": "Get a crutch",
-  "advancement.mahiro.poisonous_wolf": "Ah, it's poisonous!",
-  "advancement.mahiro.poisonous_wolf.description": "Chocolate is highly toxic to dogs. Be careful!",
   "advancement.mahiro.chocolate": "Calorie Bomb",
   "advancement.mahiro.chocolate.description": "Get a chocolate.",
+  "advancement.mahiro.crutch": "Grandpa's Crutch",
+  "advancement.mahiro.crutch.description": "Get a crutch.",
+  "advancement.mahiro.poisonous_wolf": "Oh, it's poisonous!",
+  "advancement.mahiro.poisonous_wolf.description": "Be careful! Chocolate is highly toxic to dogs!",
 
 
 
-  "item.mahiro.chocolate": "chocolate",
-  "item.mahiro.chocolate.tips": "§6A chocolate with high calories",
-  "item.mahiro.crutch": "crutch",
-  "item.mahiro.crutch.tips": "§6An old walking stick left by grandfather.Maybe it has some magical effect? ",
-  "item.mahiro.hardener": "hardener",
-  "item.mahiro.hardener.tips": "§6The precious material,obtained through several calcinations,has extremely strong hardness and ductility.",
+  "item.mahiro.chocolate": "Chocolate",
+  "item.mahiro.chocolate.tips": "§6A high-calorie chocolate.",
+  "item.mahiro.crutch": "Crutch",
+  "item.mahiro.crutch.tips": "§6An old crutch left by grandpa. Maybe it has some magical effect?",
+  "item.mahiro.hardener": "Hardener",
+  "item.mahiro.hardener.tips": "§6A precious material obtained through multiple calcinations, with excellent ductility and extreme hardness.",
+  "item.mahiro.orange": "Orange",
+  "item.mahiro.orange.tips": "§6An orange! Refreshing and delicious!",
+  "item.mahiro.orange_seeds": "Orange Seeds",
+  "item.mahiro.orange_seeds.tips": "§6Plant it, and you will get an orange tree.",
+  "item.mahiro.rotten_orange": "Rotten Orange",
+  "item.mahiro.rotten_orange.tips": "§6What is this? Try eating it to find out.",
 
 
 
-  "itemgroup.mahiro.fight": "IndustrialRevolution:fight",
-  "itemgroup.mahiro.food": "IndustrialRevolution:food",
-  "itemgroup.mahiro.material": "IndustrialRevolution:material"
+  "itemgroup.mahiro.fight": "Industrial Revolution: Fight Items",
+  "itemgroup.mahiro.food": "Industrial Revolution: Food",
+  "itemgroup.mahiro.material": "Industrial Revolution: Materials"
 }
