@@ -1,13 +1,23 @@
 {
-  "item.mahiro.crutch": "crutch",
-  "item.mahiro.hardener": "hardener",
-  "itemgroup.mahiro.fight": "IndustrialRevolution:fight",
-  "itemgroup.mahiro.food": "IndustrialRevolution:food",
-  "itemgroup.mahiro.material": "IndustrialRevolution:material",
-  "item.mahiro.crutch.tips": "§6An old walking stick left by grandfather.Maybe it has some magical effect? ",
   "advancement.mahiro.crutch": "Crutches from grandpa!",
   "advancement.mahiro.crutch.description": "Get a crutch",
-  "item.mahiro.hardener.tips":"§6The precious material,obtained through several calcinations,has extremely strong hardness and ductility.",
-  "item.mahiro.chocolate":"chocolate",
-  "item.mahiro.chocolate.tips": "§6A chocolate with high calories"
+  "advancement.mahiro.poisonous_wolf": "Ah, it's poisonous!",
+  "advancement.mahiro.poisonous_wolf.description": "Chocolate is highly toxic to dogs. Be careful!",
+  "advancement.mahiro.chocolate": "Calorie Bomb",
+  "advancement.mahiro.chocolate.description": "Get a chocolate.",
+
+
+
+  "item.mahiro.chocolate": "chocolate",
+  "item.mahiro.chocolate.tips": "§6A chocolate with high calories",
+  "item.mahiro.crutch": "crutch",
+  "item.mahiro.crutch.tips": "§6An old walking stick left by grandfather.Maybe it has some magical effect? ",
+  "item.mahiro.hardener": "hardener",
+  "item.mahiro.hardener.tips": "§6The precious material,obtained through several calcinations,has extremely strong hardness and ductility.",
+
+
+
+  "itemgroup.mahiro.fight": "IndustrialRevolution:fight",
+  "itemgroup.mahiro.food": "IndustrialRevolution:food",
+  "itemgroup.mahiro.material": "IndustrialRevolution:material"
 }

@@ -1,9 +1,7 @@
 package mahiro76.mahiro.registry;
 
 import mahiro76.mahiro.Mahiro;
-import mahiro76.mahiro.registry.item.Chocolate;
-import mahiro76.mahiro.registry.item.Crutch;
-import mahiro76.mahiro.registry.item.Hardener;
+import mahiro76.mahiro.registry.item.*;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -17,6 +15,13 @@ public class MahiroItems {
     public static final Hardener HARDENER = registerItem("hardener", new Hardener(new Item.Settings()));
     //添加巧克力
     public static final Chocolate CHOCOLATE = registerItem("chocolate", new Chocolate(new Item.Settings()));
+    //添加橙子种子
+    public static final Item ORANGE_SEEDS = registerItem("orange_seeds", new OrangeSeed(new Item.Settings()));
+    //添加橙子
+    public static final Item ORANGE = registerItem("orange", new Orange(new Item.Settings()));
+    //添加坏橙子
+    public static final Item BAD_ORANGE = registerItem("bad_orange", new BadOrange(new Item.Settings()));
+
 
     //添加物品辅助方法
     public static <T extends Item> T registerItem(String name, T item) {

@@ -18,6 +18,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.CRUTCH))
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroItems.CRUTCH);
+
                     }).build());
 
     // 材料物品类
@@ -28,6 +29,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.HARDENER))
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroItems.HARDENER);
+
                     }).build());
 
     // 自然方块物品类
@@ -38,6 +40,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroBlocks.Limestone))
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroBlocks.Limestone);
+
                     }).build());
 
     // 工具物品类
@@ -48,6 +51,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
+
                     }).build());
 
     // 食物物品类
@@ -58,7 +62,22 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.CHOCOLATE))//使用巧克力作为图标
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
-                        entries.add(MahiroItems.CHOCOLATE);//将巧克力添加到食品物品类
+                        entries.add(MahiroItems.CHOCOLATE);
+                        entries.add(MahiroItems.ORANGE);
+                        entries.add(MahiroItems.BAD_ORANGE);
+
+                    }).build());
+
+    // 作物物品类
+    public static ItemGroup CROP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Mahiro.MOD_ID, "crop"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.mahiro.crop"))
+                    .icon(() -> new ItemStack(MahiroBlocks.OrangeBlock))//使用橘子作为图标
+                    .entries((displayContext, entries) -> {
+                        //在此处添加物品
+                        entries.add(MahiroItems.ORANGE_SEEDS);
+
                     }).build());
 
     // 启动初始化方法

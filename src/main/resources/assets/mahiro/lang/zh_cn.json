@@ -1,13 +1,23 @@
 {
-  "item.mahiro.crutch": "拐杖",
-  "item.mahiro.hardener": "硬化剂",
-  "itemgroup.mahiro.fight": "工业革命:战斗用品",
-  "itemgroup.mahiro.food": "工业革命:食物",
-  "itemgroup.mahiro.material": "工业革命:材料",
-  "item.mahiro.crutch.tips": "§6爷爷留下的一根破旧拐杖,或许有着奇特的效果？",
   "advancement.mahiro.crutch": "爷爷的拐杖",
   "advancement.mahiro.crutch.description": "获得一根拐杖",
-  "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。",
+  "advancement.mahiro.poisonous_wolf": "哎，有毒！",
+  "advancement.mahiro.poisonous_wolf.description": "小心！对于狗来说，巧克力是剧毒的!",
+  "advancement.mahiro.chocolate": "卡路里炸弹！",
+  "advancement.mahiro.chocolate.description": "获得一块巧克力。",
+
+
+
   "item.mahiro.chocolate": "热量巧克力",
-  "item.mahiro.chocolate.tips": "§6一条高热量的巧克力"
+  "item.mahiro.chocolate.tips": "§6一条高热量的巧克力",
+  "item.mahiro.crutch": "拐杖",
+  "item.mahiro.crutch.tips": "§6爷爷留下的一根破旧拐杖,或许有着奇特的效果？",
+  "item.mahiro.hardener": "硬化剂",
+  "item.mahiro.hardener.tips": "§6经过多次煅烧而得到的珍贵材料,具有相当良好的延展性和极强的硬度。",
+
+
+
+  "itemgroup.mahiro.fight": "工业革命:战斗用品",
+  "itemgroup.mahiro.food": "工业革命:食物",
+  "itemgroup.mahiro.material": "工业革命:材料"
 }
