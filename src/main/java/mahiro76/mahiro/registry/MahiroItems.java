@@ -18,7 +18,7 @@ public class MahiroItems {
     //添加橙子种子
     public static final Item ORANGE_SEEDS = registerItem("orange_seeds", new OrangeSeed(new Item.Settings()));
     //添加橙子
-    public static final Item ORANGE = registerItem("orange", new Orange(new Item.Settings()));
+    public static final Item ORANGE = registerItem("orange",new Orange(new Item.Settings(),ORANGE_SEEDS));
     //添加坏橙子
     public static final Item ROTTEN_ORANGE = registerItem("rotten_orange", new RottenOrange(new Item.Settings()));
 
