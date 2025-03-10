@@ -1,6 +1,7 @@
 plugins {
 	id 'fabric-loom' version '1.9-SNAPSHOT'
 	id 'maven-publish'
+	id "com.modrinth.minotaur" version "2.+"
 }
 
 version = project.mod_version
@@ -41,16 +42,16 @@ dependencies {
 	
 }
 
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 17
+}
+
 processResources {
 	inputs.property "version", project.version
 
-	filesMatching("fabric.mod.json") {
+	filesMatching("src/main/resources/fabric.mod.json") {
 		expand "version": project.version
 	}
-}
-
-tasks.withType(JavaCompile).configureEach {
-	it.options.release = 17
 }
 
 java {
@@ -86,3 +87,25 @@ publishing {
 		// retrieving dependencies.
 	}
 }
+
+modrinth {//modrinth自动发布任务
+	token = System.getenv("MODRINTH_TOKEN") // 请记住设置 MODRINTH_TOKEN 环境变量，否则会失败 - 只需确保它保持私有即可！
+	projectId = "industrial-revolution-mahiro76" // 这可以是项目 ID 或 slug。两者都可以！
+	versionName = "IndustrialRevolution-mahiro76 "+version // Modrinth版本描述。
+	versionNumber = version // 您无需手动设置。如果 Modrinth 已经有这个版本，将失败
+	changelog = "Modify the way to obtain orange seeds and add natural generation logic.(#ToDo)"//更新日志（英文！）；支持 Markdown 格式
+	versionType = "beta" // 这是默认值 -- 也可以是 'beta' 或 'alpha'（正式版为release）
+	uploadFile = jar // 对于 Loom，必须将其设置为 'remapJar' 而不是 'jar'！
+	gameVersions = ["1.20.1"] // 必须是一个数组，即使只有一个版本
+	loaders = ["fabric"] // 还必须是一个数组 - 如果您使用的是 Loom 或 ForgeGradle，则无需指定此数组
+	dependencies { // 用于创建依赖项的特殊 DSL
+		// scope.type
+		// 范围可以是 'required'、'optional'、'incompatible' 或 'embedded'
+		// 类型可以是 'project' 或 'version'
+		required.project "fabric-api" // 在 Fabric API 上创建新的必需依赖项
+	}
+
+}
+
+
+
