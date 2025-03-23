@@ -23,14 +23,14 @@ import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
 
-public class OrangeBlock extends PlantBlock implements Fertilizable {
+public class OrangeBushBlock extends PlantBlock implements Fertilizable {
 
 
     public static final IntProperty AGE = Properties.AGE_3;
     private static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(3.0, 0.0, 3.0, 13.0, 8.0, 13.0);
     private static final VoxelShape LARGE_SHAPE = Block.createCuboidShape(1.0, 0.0, 1.0, 15.0, 16.0, 15.0);
 
-    public OrangeBlock(Settings settings) {
+    public OrangeBushBlock(Settings settings) {
         super(settings);
         this.setDefaultState(this.stateManager.getDefaultState().with(AGE, 0));
     }

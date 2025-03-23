@@ -77,6 +77,7 @@ public class Advancements implements Consumer<Consumer<Advancement>> {
                 )
                 .build(consumer, "mahiro/poisonous_wolf");
 
+
     }
 
 

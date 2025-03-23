@@ -12,6 +12,6 @@ public class MahiroClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient(){
-        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), MahiroBlocks.OrangeBlock);
+        BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), MahiroBlocks.OrangeBushBlock);
     }
 }

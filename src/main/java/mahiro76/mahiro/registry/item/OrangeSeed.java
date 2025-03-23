@@ -27,7 +27,7 @@ public class OrangeSeed extends Item {
         BlockState state = world.getBlockState(pos);
 
         if (state.isOf(Blocks.GRASS_BLOCK)) {
-            world.setBlockState(pos.up(), MahiroBlocks.OrangeBlock.getDefaultState());
+            world.setBlockState(pos.up(), MahiroBlocks.OrangeBushBlock.getDefaultState());
             context.getStack().decrement(1);
             return ActionResult.SUCCESS;
         }

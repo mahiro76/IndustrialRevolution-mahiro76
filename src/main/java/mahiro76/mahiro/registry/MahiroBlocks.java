@@ -1,11 +1,10 @@
 package mahiro76.mahiro.registry;
 
 import mahiro76.mahiro.Mahiro;
-import mahiro76.mahiro.registry.block.OrangeBlock;
+import mahiro76.mahiro.registry.block.OrangeBushBlock;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.MapColor;
-import net.minecraft.block.SweetBerryBushBlock;
 import net.minecraft.block.piston.PistonBehavior;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
@@ -17,9 +16,9 @@ import net.minecraft.util.Identifier;
 public class MahiroBlocks {
     //在下方添加物品
     public static Block Limestone = register("limestone", new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.STONE)));
-    public static final Block OrangeBlock = register(
+    public static final Block OrangeBushBlock = register(
             "orange_block",
-            new OrangeBlock(
+            new OrangeBushBlock(
                     AbstractBlock.Settings.create()
                             .mapColor(MapColor.DARK_GREEN)
                             .ticksRandomly()
