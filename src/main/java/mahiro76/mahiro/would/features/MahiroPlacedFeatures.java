@@ -1,4 +1,4 @@
-package mahiro76.mahiro.registry;
+package mahiro76.mahiro.would.features;
 
 import mahiro76.mahiro.Mahiro;
 import net.minecraft.registry.Registerable;
@@ -29,7 +29,7 @@ public class MahiroPlacedFeatures {
     }
 
     public static RegistryKey<PlacedFeature> of(String id) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Mahiro.MOD_ID, id));
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("industrial-revolution-mahiro76", id));//Identifier 的第一个参数必须是你的 mod id（比如 mahiro76），这样生成的 json 文件才会放在 data/mahiro76/worldgen/... 目录下。
     }
 
     public static void register(
@@ -50,7 +50,4 @@ public class MahiroPlacedFeatures {
         register(featureRegisterable, key, feature, List.of(modifiers));
     }
 
-    public static void registerMahiroPlacedFeatures() {
-        Mahiro.LOGGER.debug("Registering mod BiomeModification for" + Mahiro.MOD_ID);
-    }
 }
