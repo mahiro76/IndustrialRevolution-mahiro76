@@ -10,7 +10,6 @@ import net.minecraft.world.World;
 import java.util.List;
 
 public class Chocolate extends Item {
-
     //食品属性
     public Chocolate(Settings settings) {
         super(settings.food(new FoodComponent.Builder()

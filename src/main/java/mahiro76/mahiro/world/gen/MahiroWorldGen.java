@@ -1,4 +1,4 @@
-package mahiro76.mahiro.would.gen;
+package mahiro76.mahiro.world.gen;
 
 public class MahiroWorldGen {
 

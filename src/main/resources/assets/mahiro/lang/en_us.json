@@ -17,13 +17,13 @@
   "item.mahiro.orange": "Orange",
   "item.mahiro.orange.tips": "§6An orange! Refreshing and delicious!",
   "item.mahiro.orange_seeds": "Orange Seeds",
-  "item.mahiro.orange_seeds.tips": "§6Plant it, and you will get an orange tree.",
+  "item.mahiro.orange_seed.tips": "§6Plant it, and you will get an orange tree.",
   "item.mahiro.rotten_orange": "Rotten Orange",
   "item.mahiro.rotten_orange.tips": "§6What is this? Try eating it to find out.",
-
 
 
   "itemgroup.mahiro.fight": "Industrial Revolution: Fight Items",
   "itemgroup.mahiro.food": "Industrial Revolution: Food",
   "itemgroup.mahiro.material": "Industrial Revolution: Materials"
+
 }

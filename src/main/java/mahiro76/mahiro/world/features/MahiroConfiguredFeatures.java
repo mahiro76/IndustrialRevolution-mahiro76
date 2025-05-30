@@ -1,6 +1,5 @@
-package mahiro76.mahiro.would.features;
+package mahiro76.mahiro.world.features;
 
-import mahiro76.mahiro.Mahiro;
 import mahiro76.mahiro.registry.MahiroBlocks;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;

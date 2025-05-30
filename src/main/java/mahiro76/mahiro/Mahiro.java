@@ -1,7 +1,7 @@
 package mahiro76.mahiro;
 
 import mahiro76.mahiro.registry.*;
-import mahiro76.mahiro.would.gen.MahiroWorldGen;
+import mahiro76.mahiro.world.gen.MahiroWorldGen;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

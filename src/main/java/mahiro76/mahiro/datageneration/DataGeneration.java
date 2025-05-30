@@ -1,7 +1,7 @@
 package mahiro76.mahiro.datageneration;
 
-import mahiro76.mahiro.would.features.MahiroConfiguredFeatures;
-import mahiro76.mahiro.would.features.MahiroPlacedFeatures;
+import mahiro76.mahiro.world.features.MahiroConfiguredFeatures;
+import mahiro76.mahiro.world.features.MahiroPlacedFeatures;
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
 import net.minecraft.registry.RegistryBuilder;

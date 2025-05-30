@@ -1,6 +1,6 @@
-package mahiro76.mahiro.would.gen;
+package mahiro76.mahiro.world.gen;
 
-import mahiro76.mahiro.would.features.MahiroPlacedFeatures;
+import mahiro76.mahiro.world.features.MahiroPlacedFeatures;
 import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
 import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.minecraft.world.biome.BiomeKeys;
