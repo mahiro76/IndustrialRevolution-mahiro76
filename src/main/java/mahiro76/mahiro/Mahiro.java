@@ -18,14 +18,14 @@ public class Mahiro implements ModInitializer {
 		// 此代码在 Minecraft 处于 mod-load-ready 状态后立即运行。
 		// 但是，某些内容 （（如资源） ） 可能仍未初始化。
 		// 请谨慎行事。
-		/// 若对于MIXIN不理解，可利用此方式使物品可以燃烧（fabric Api），注意，必须写在模组主类中。
-		/// public void onInitialize() {
-		/// 在下方添加可在熔炉中燃烧的物品
-		/// FuelRegistry.INSTANCE.add(MahiroItems.CRUTCH, 300);
-		///}
+		/*若对于MIXIN不理解，可利用此方式使物品可以燃烧（fabric Api），注意，必须写在模组主类中。
+		 public void onInitialize() {
+		     FuelRegistry.INSTANCE.add(MahiroItems.CRUTCH, 300);
+		 }
+		 */
 		LOGGER.info("mahiro run successfully!");
-		MahiroItemGroup.registerModItemGroup();
 		MahiroItems.registerMahiroItems();
+		MahiroItemGroup.registerModItemGroup();
 		MahiroBlocks.registerMahiroBlocks();
 		MahiroWorldGen.initialization();
 	}

@@ -1,3 +1,5 @@
+# This license is based on the MIT License, with additional restrictions prohibiting commercial use and closed-source redistribution.
+# 本协议基于 MIT 协议，增加了禁止商用和禁止闭源再分发的附加条款。
 MIT License
 
 Copyright (c) 2025 mahiro76
@@ -19,3 +21,9 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Additional restrictions:
+1. This software is NOT allowed to be used for any commercial purpose.
+2. Any redistribution, modification, or derivative work of this software
+must be open source under the same license and must not be distributed
+in a closed-source manner.
