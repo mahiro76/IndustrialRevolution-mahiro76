@@ -22,9 +22,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.WorldView;
 import net.minecraft.world.event.GameEvent;
 
-
+/**通过仿照原版甜浆果灌木的代码编写，添加了橙子灌木的功能
+ *该类实现了Fertilizable接口，允许使用骨粉来加速生长
+ *该类还实现了随机生长和成熟的逻辑
+ * @see net.minecraft.block.SweetBerryBushBlock
+ * @author mahiro76
+ */
 public class OrangeBushBlock extends PlantBlock implements Fertilizable {
-
 
     public static final IntProperty AGE = Properties.AGE_3;
     private static final VoxelShape SMALL_SHAPE = Block.createCuboidShape(3.0, 0.0, 3.0, 13.0, 8.0, 13.0);

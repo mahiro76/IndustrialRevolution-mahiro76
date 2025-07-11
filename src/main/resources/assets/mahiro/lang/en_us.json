@@ -24,6 +24,8 @@
 
   "itemgroup.mahiro.fight": "Industrial Revolution: Fight Items",
   "itemgroup.mahiro.food": "Industrial Revolution: Food",
-  "itemgroup.mahiro.material": "Industrial Revolution: Materials"
+  "itemgroup.mahiro.material": "Industrial Revolution: Materials",
+  "itemgroup.mahiro.tool": "Industrial Revolution: tool",
+  "itemgroup.mahiro.natural_block": "Industrial Revolution: natural block"
 
 }

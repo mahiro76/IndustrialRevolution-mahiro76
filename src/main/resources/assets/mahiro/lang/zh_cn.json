@@ -25,5 +25,7 @@
 
   "itemgroup.mahiro.fight": "工业革命:战斗用品",
   "itemgroup.mahiro.food": "工业革命:食物",
-  "itemgroup.mahiro.material": "工业革命:材料"
+  "itemgroup.mahiro.material": "工业革命:材料",
+  "itemgroup.mahiro.tool": "工业革命:工具",
+  "itemgroup.mahiro.natural_block": "工业革命:自然方块"
 }
