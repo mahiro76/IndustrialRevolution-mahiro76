@@ -93,7 +93,7 @@ modrinth {//modrinth自动发布任务
 	projectId = "industrial-revolution-mahiro76" // 这可以是项目 ID 或 slug。两者都可以！
 	versionName = "IndustrialRevolution-mahiro76 "+version // Modrinth版本描述。
 	versionNumber = version // 您无需手动设置。如果 Modrinth 已经有这个版本，将失败
-	changelog = "Refactor: Orange tree generation related code"//更新日志（英文！）；支持 Markdown 格式
+	changelog = "Refactor Rotten Orange entity logic, simplify collision handling and documentation"//更新日志（英文！）；支持 Markdown 格式
 	versionType = "beta" // 这是默认值 -- 也可以是 'beta' 或 'alpha'（正式版为release）
 	uploadFile = jar // 对于 Loom，必须将其设置为 'remapJar' 而不是 'jar'！
 	gameVersions = ["1.20.1"] // 必须是一个数组，即使只有一个版本

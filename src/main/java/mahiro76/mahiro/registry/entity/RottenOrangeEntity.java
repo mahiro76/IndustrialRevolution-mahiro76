@@ -3,6 +3,7 @@ package mahiro76.mahiro.registry.entity;
 import mahiro76.mahiro.registry.MahiroEntityType;
 import mahiro76.mahiro.registry.MahiroItems;
 import net.minecraft.block.BlockState;
+import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityStatuses;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
@@ -54,6 +55,11 @@ public class RottenOrangeEntity extends ThrownItemEntity {
     public RottenOrangeEntity(World world, double x, double y, double z) {
         super(MahiroEntityType.RottenOrange, x, y, z, world);
     }
+
+    @Override
+    protected boolean canHit(Entity entity) {
+        return super.canHit(entity) && entity != this.getOwner();
+    }
     /**
      * 获取该实体销毁时的粒子特效。
      * 如果物品栈为空，则使用雪球粒子，否则使用物品粒子。
@@ -73,7 +79,6 @@ public class RottenOrangeEntity extends ThrownItemEntity {
     public void handleStatus(byte status) {
         if (status == EntityStatuses.PLAY_DEATH_SOUND_OR_ADD_PROJECTILE_HIT_PARTICLES) {
             ParticleEffect particleEffect = this.getParticleParameters();
-
             for (int i = 0; i < 8; i++) {
                 this.getWorld().addParticle(particleEffect, this.getX(), this.getY(), this.getZ(), 0.0, 0.0, 0.0);
             }
@@ -86,6 +91,9 @@ public class RottenOrangeEntity extends ThrownItemEntity {
     @Override
     protected void onEntityHit(EntityHitResult entityHitResult) {
         super.onEntityHit(entityHitResult);
+        Entity entity = entityHitResult.getEntity();
+        int i = entity instanceof BlazeEntity ? 3 : 0;
+        entity.damage(this.getDamageSources().thrown(this, this.getOwner()), (float)i);
     }
     /**
      * 当该实体与任何对象（实体或方块）发生碰撞时调用。

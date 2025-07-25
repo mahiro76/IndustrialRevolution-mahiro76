@@ -15,8 +15,9 @@ public class MahiroClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient(){
+        //注册方块渲染层
         BlockRenderLayerMap.INSTANCE.putBlocks(RenderLayer.getCutout(), MahiroBlocks.OrangeBushBlock);
-
+        //注册实体渲染器
         EntityRendererRegistry.register(MahiroEntityType.RottenOrange, (context) ->
                 new FlyingItemEntityRenderer(context));
     }
