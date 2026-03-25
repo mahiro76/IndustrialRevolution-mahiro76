@@ -15,7 +15,7 @@ public class MahiroConfiguredFeatures {
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable){
         register(featureRegisterable, ORANGE_BUSH_BLOCK_KEY, Feature.FLOWER, new RandomPatchFeatureConfig(32,3,4,
-                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(MahiroBlocks.OrangeBushBlock)))));
+                PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(BlockStateProvider.of(MahiroBlocks.ORANGE_BUSH_BLOCK)))));
 
     }
 

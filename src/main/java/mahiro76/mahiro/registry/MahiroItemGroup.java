@@ -37,9 +37,9 @@ public class MahiroItemGroup {
             new Identifier(Mahiro.MOD_ID, "natural_block"),
             FabricItemGroup.builder()
                     .displayName(Text.translatable("itemgroup.mahiro.natural_block"))
-                    .icon(() -> new ItemStack(MahiroBlocks.Limestone))
+                    .icon(() -> new ItemStack(MahiroBlocks.LIMESTONE))
                     .entries((displayContext, entries) -> {
-                        entries.add(MahiroBlocks.Limestone);
+                        entries.add(MahiroBlocks.LIMESTONE);
 
                     }).build());
 
