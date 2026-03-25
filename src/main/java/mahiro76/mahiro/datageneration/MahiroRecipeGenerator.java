@@ -44,12 +44,12 @@ public class MahiroRecipeGenerator extends FabricRecipeProvider {
                 .offerTo(exporter);
         //添加熔炼配方
         CookingRecipeJsonBuilder.createSmelting(
-                Ingredient.ofItems(MahiroBlocks.Limestone),
+                Ingredient.ofItems(MahiroBlocks.LIMESTONE),
                 RecipeCategory.MISC,
                 Items.WHITE_CONCRETE_POWDER,
                 0.7f,
                 100)
-                .criterion(hasItem(MahiroBlocks.Limestone), RecipeProvider.conditionsFromItem(MahiroBlocks.Limestone))
+                .criterion(hasItem(MahiroBlocks.LIMESTONE), RecipeProvider.conditionsFromItem(MahiroBlocks.LIMESTONE))
                 .offerTo(exporter);
         //混凝土配方
         offerConcretePowderDyeingMoreRecipe(exporter, Blocks.BLACK_CONCRETE_POWDER, Items.BLACK_DYE);
