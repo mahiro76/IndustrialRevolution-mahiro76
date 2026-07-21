@@ -18,6 +18,10 @@ This is an open-source industrial-themed mod for Minecraft 1.20.1, tentatively n
 ## Contribution
 Contributions are welcome via Issues or Pull Requests. Please follow the contribution guidelines.
 
+## Acknowledgments
+
+Thanks to [@fcsailboat](https://github.com/fcsailboat) for his help during the development of this module, which has benefited me a lot.
+
 ## License
 
 This project is licensed under the MIT License with the following additional restrictions:

@@ -27,5 +27,24 @@
   "itemgroup.mahiro.food": "工业革命:食物",
   "itemgroup.mahiro.material": "工业革命:材料",
   "itemgroup.mahiro.tool": "工业革命:工具",
-  "itemgroup.mahiro.natural_block": "工业革命:自然方块"
+  "itemgroup.mahiro.natural_block": "工业革命:自然方块",
+
+  "block.mahiro.glowing_glass": "发光玻璃",
+  "block.mahiro.white_stained_glowing_glass": "白色染色发光玻璃",
+  "block.mahiro.orange_stained_glowing_glass": "橙色染色发光玻璃",
+  "block.mahiro.magenta_stained_glowing_glass": "品红色染色发光玻璃",
+  "block.mahiro.light_blue_stained_glowing_glass": "淡蓝色染色发光玻璃",
+  "block.mahiro.yellow_stained_glowing_glass": "黄色染色发光玻璃",
+  "block.mahiro.lime_stained_glowing_glass": "黄绿色染色发光玻璃",
+  "block.mahiro.pink_stained_glowing_glass": "粉色染色发光玻璃",
+  "block.mahiro.gray_stained_glowing_glass": "灰色染色发光玻璃",
+  "block.mahiro.light_gray_stained_glowing_glass": "淡灰色染色发光玻璃",
+  "block.mahiro.cyan_stained_glowing_glass": "青色染色发光玻璃",
+  "block.mahiro.purple_stained_glowing_glass": "紫色染色发光玻璃",
+  "block.mahiro.blue_stained_glowing_glass": "蓝色染色发光玻璃",
+  "block.mahiro.brown_stained_glowing_glass": "棕色染色发光玻璃",
+  "block.mahiro.green_stained_glowing_glass": "绿色染色发光玻璃",
+  "block.mahiro.red_stained_glowing_glass": "红色染色发光玻璃",
+  "block.mahiro.black_stained_glowing_glass": "黑色染色发光玻璃"
+
 }
