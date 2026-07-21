@@ -29,6 +29,7 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.HARDENER))
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroItems.HARDENER);
+                        entries.add(MahiroItems.GLOWPOWDER);
 
                     }).build());
 
@@ -51,6 +52,34 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroItems.CRUTCH))//暂时使用拐杖作为图标，后续替换
                     .entries((displayContext, entries) -> {
                         //在此处添加物品
+
+                    }).build());
+
+    //建筑方块类
+    public static ItemGroup BUILD = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(Mahiro.MOD_ID, "build"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemgroup.mahiro.build"))
+                    .icon(() -> new ItemStack(MahiroBlocks.GLOWING_GLASS))//暂时使用拐杖作为图标，后续替换
+                    .entries((displayContext, entries) -> {
+                        //在此处添加物品
+                        entries.add(MahiroBlocks.GLOWING_GLASS);
+                        entries.add(MahiroBlocks.WHITE_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.ORANGE_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.MAGENTA_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.LIGHT_BLUE_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.YELLOW_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.LIME_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.PINK_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.GRAY_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.LIGHT_GRAY_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.CYAN_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.PURPLE_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.BLUE_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.BROWN_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.GREEN_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.RED_STAINED_GLOWING_GLASS);
+                        entries.add(MahiroBlocks.BLACK_STAINED_GLOWING_GLASS);
 
                     }).build());
 

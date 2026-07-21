@@ -26,6 +26,24 @@
   "itemgroup.mahiro.food": "Industrial Revolution: Food",
   "itemgroup.mahiro.material": "Industrial Revolution: Materials",
   "itemgroup.mahiro.tool": "Industrial Revolution: tool",
-  "itemgroup.mahiro.natural_block": "Industrial Revolution: natural block"
+  "itemgroup.mahiro.natural_block": "Industrial Revolution: natural block",
+
+  "block.mahiro.glowing_glass": "Glowing Glass",
+  "block.mahiro.white_stained_glowing_glass": "White Stained Glowing Glass",
+  "block.mahiro.orange_stained_glowing_glass": "Orange Stained Glowing Glass",
+  "block.mahiro.magenta_stained_glowing_glass": "Magenta Stained Glowing Glass",
+  "block.mahiro.light_blue_stained_glowing_glass": "Light Blue Stained Glowing Glass",
+  "block.mahiro.yellow_stained_glowing_glass": "Yellow Stained Glowing Glass",
+  "block.mahiro.lime_stained_glowing_glass": "Lime Stained Glowing Glass",
+  "block.mahiro.pink_stained_glowing_glass": "Pink Stained Glowing Glass",
+  "block.mahiro.gray_stained_glowing_glass": "Gray Stained Glowing Glass",
+  "block.mahiro.light_gray_stained_glowing_glass": "Light Gray Stained Glowing Glass",
+  "block.mahiro.cyan_stained_glowing_glass": "Cyan Stained Glowing Glass",
+  "block.mahiro.purple_stained_glowing_glass": "Purple Stained Glowing Glass",
+  "block.mahiro.blue_stained_glowing_glass": "Blue Stained Glowing Glass",
+  "block.mahiro.brown_stained_glowing_glass": "Brown Stained Glowing Glass",
+  "block.mahiro.green_stained_glowing_glass": "Green Stained Glowing Glass",
+  "block.mahiro.red_stained_glowing_glass": "Red Stained Glowing Glass",
+  "block.mahiro.black_stained_glowing_glass": "Black Stained Glowing Glass"
 
 }

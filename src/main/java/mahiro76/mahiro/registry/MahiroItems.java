@@ -21,6 +21,8 @@ public class MahiroItems {
     public static final Item ORANGE = registerItem("orange",new Orange(new Item.Settings(),ORANGE_SEEDS));
     //添加坏橙子
     public static final Item ROTTEN_ORANGE = registerItem("rotten_orange", new RottenOrange(new Item.Settings()));
+    //添加荧光粉
+    public static final Item GLOWPOWDER = registerItem("glow_powder", new GlowPowder(new Item.Settings()));
 
 
     //添加物品辅助方法

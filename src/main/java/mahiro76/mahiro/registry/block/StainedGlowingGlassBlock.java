@@ -14,6 +14,6 @@ public class StainedGlowingGlassBlock extends AbstractGlassBlock implements Stai
 
     @Override
     public DyeColor getColor() {
-        return null;
+        return this.color;
     }
 }
