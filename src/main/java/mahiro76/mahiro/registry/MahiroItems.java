@@ -9,20 +9,24 @@ import net.minecraft.util.Identifier;
 
 public class MahiroItems {
 
-    //添加拐杖
+    //拐杖
     public static final Crutch CRUTCH = registerItem("crutch", new Crutch(new Item.Settings()));
-    //添加固化剂
+    //固化剂
     public static final Hardener HARDENER = registerItem("hardener", new Hardener(new Item.Settings()));
-    //添加巧克力
+    //巧克力
     public static final Chocolate CHOCOLATE = registerItem("chocolate", new Chocolate(new Item.Settings()));
-    //添加橙子种子
+    //橙子种子
     public static final Item ORANGE_SEEDS = registerItem("orange_seeds", new OrangeSeed(new Item.Settings()));
-    //添加橙子
+    //橙子
     public static final Item ORANGE = registerItem("orange",new Orange(new Item.Settings(),ORANGE_SEEDS));
-    //添加坏橙子
+    //坏橙子
     public static final Item ROTTEN_ORANGE = registerItem("rotten_orange", new RottenOrange(new Item.Settings()));
-    //添加荧光粉
+    //荧光粉
     public static final Item GLOWPOWDER = registerItem("glow_powder", new GlowPowder(new Item.Settings()));
+    //粗铅
+    public static final Item RAW_LEAD = registerItem("raw_lead", new RawLead(new Item.Settings()));
+    //铅锭
+    public static final Item LEAD_INGOT = registerItem("lead_ingot", new LeadIngot(new Item.Settings()));
 
 
     //添加物品辅助方法

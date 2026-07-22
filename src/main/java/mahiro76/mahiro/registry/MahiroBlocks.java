@@ -83,6 +83,8 @@ public class MahiroBlocks {
         );
     }
 
+    public static final Block LEAD_ORE = register("lead_ore", new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE)));
+
     /**
      *{@link #registerBlockItems(String, Block)}与{@link #register(String, Block)}方法的作用是注册方块和方块物品。
      */
