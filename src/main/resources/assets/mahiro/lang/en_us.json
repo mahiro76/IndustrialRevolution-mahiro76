@@ -44,6 +44,10 @@
   "block.mahiro.brown_stained_glowing_glass": "Brown Stained Glowing Glass",
   "block.mahiro.green_stained_glowing_glass": "Green Stained Glowing Glass",
   "block.mahiro.red_stained_glowing_glass": "Red Stained Glowing Glass",
-  "block.mahiro.black_stained_glowing_glass": "Black Stained Glowing Glass"
+  "block.mahiro.black_stained_glowing_glass": "Black Stained Glowing Glass",
+  "block.mahiro.lead_ore": "Lead Ore",
+  "block.mahiro.deepslate_lead_ore": "Deepslate Lead Ore",
 
+  "item.mahiro.raw_lead": "Raw Lead",
+  "item.mahiro.lead_ingot": "Lead Ingot"
 }

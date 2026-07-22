@@ -51,6 +51,23 @@ public class MahiroRecipeGenerator extends FabricRecipeProvider {
                 100)
                 .criterion(hasItem(MahiroBlocks.LIMESTONE), RecipeProvider.conditionsFromItem(MahiroBlocks.LIMESTONE))
                 .offerTo(exporter);
+        //粗铅烧炼成铅锭
+        CookingRecipeJsonBuilder.createSmelting(
+                Ingredient.ofItems(MahiroItems.RAW_LEAD),
+                RecipeCategory.MISC,
+                MahiroItems.LEAD_INGOT,
+                0.7f,
+                200)
+                .criterion(hasItem(MahiroItems.RAW_LEAD), RecipeProvider.conditionsFromItem(MahiroItems.RAW_LEAD))
+                .offerTo(exporter, "mahiro:lead_ingot_from_smelting_raw_lead");
+        CookingRecipeJsonBuilder.createBlasting(
+                Ingredient.ofItems(MahiroItems.RAW_LEAD),
+                RecipeCategory.MISC,
+                MahiroItems.LEAD_INGOT,
+                0.7f,
+                100)
+                .criterion(hasItem(MahiroItems.RAW_LEAD), RecipeProvider.conditionsFromItem(MahiroItems.RAW_LEAD))
+                .offerTo(exporter, "mahiro:lead_ingot_from_blasting_raw_lead");
         //混凝土配方
         offerConcretePowderDyeingMoreRecipe(exporter, Blocks.BLACK_CONCRETE_POWDER, Items.BLACK_DYE);
         offerConcretePowderDyeingMoreRecipe(exporter, Blocks.BLUE_CONCRETE_POWDER, Items.BLUE_DYE);

@@ -18,6 +18,12 @@ import net.minecraft.util.Identifier;
 public class MahiroBlocks {
     //在下方添加物品
     public static Block LIMESTONE = register("limestone", new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.STONE)));
+
+    //铅矿
+    public static final Block LEAD_ORE = register("lead_ore",
+            new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.IRON_ORE)));
+    public static final Block DEEPSLATE_LEAD_ORE = register("deepslate_lead_ore",
+            new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.DEEPSLATE_IRON_ORE)));
     public static final Block ORANGE_BUSH_BLOCK = register(
             "orange_block",
             new OrangeBushBlock(

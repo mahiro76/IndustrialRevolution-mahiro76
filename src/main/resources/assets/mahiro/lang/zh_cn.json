@@ -45,6 +45,10 @@
   "block.mahiro.brown_stained_glowing_glass": "棕色染色发光玻璃",
   "block.mahiro.green_stained_glowing_glass": "绿色染色发光玻璃",
   "block.mahiro.red_stained_glowing_glass": "红色染色发光玻璃",
-  "block.mahiro.black_stained_glowing_glass": "黑色染色发光玻璃"
+  "block.mahiro.black_stained_glowing_glass": "黑色染色发光玻璃",
+  "block.mahiro.lead_ore": "铅矿石",
+  "block.mahiro.deepslate_lead_ore": "深层铅矿石",
 
+  "item.mahiro.raw_lead": "粗铅",
+  "item.mahiro.lead_ingot": "铅锭"
 }
