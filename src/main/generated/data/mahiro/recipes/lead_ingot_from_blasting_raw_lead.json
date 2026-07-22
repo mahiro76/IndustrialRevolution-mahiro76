@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.7,
+  "ingredient": {
+    "item": "mahiro:raw_lead"
+  },
+  "result": "mahiro:lead_ingot"
+}

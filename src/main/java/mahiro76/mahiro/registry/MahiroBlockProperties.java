@@ -133,6 +133,8 @@ public final class MahiroBlockProperties {
     public static IntProperty energyProperty(int max) {
         return IntProperty.of("energy", 0, max);
     }
+    //是否正在发电中
+    public static final BooleanProperty OPERATION = BooleanProperty.of("operation");
 
     /**
      * 私有构造器，防止实例化。

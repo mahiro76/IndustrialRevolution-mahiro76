@@ -1,5 +1,6 @@
 package mahiro76.mahiro.world.features;
 
+import mahiro76.mahiro.Mahiro;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryEntryLookup;
 import net.minecraft.registry.RegistryKey;
@@ -18,6 +19,7 @@ public class MahiroPlacedFeatures {
 
     public static final RegistryKey<PlacedFeature> ORANGE_BUSH_BLOCK_PLACED_KEY = of("orange_bush_block_placed");
     public static final RegistryKey<PlacedFeature> LEAD_ORE_PLACED_KEY = of("lead_ore_placed");
+    public static final RegistryKey<PlacedFeature> LIMESTONE_PLACED_KEY = of("limestone_placed");
 
     public static void bootstrap(Registerable<PlacedFeature> featureRegisterable){
         RegistryEntryLookup<ConfiguredFeature<?, ?>> registryEntryLookup = featureRegisterable.getRegistryLookup(RegistryKeys.CONFIGURED_FEATURE);
@@ -34,10 +36,20 @@ public class MahiroPlacedFeatures {
                         YOffset.fixed(72)          //最高 Y=72
                 ),
                 BiomePlacementModifier.of());
+
+        //石灰石放置——概率低于铅矿，分布在较高 Y 层（沉积岩特征）
+        register(featureRegisterable, LIMESTONE_PLACED_KEY, registryEntryLookup.getOrThrow(MahiroConfiguredFeatures.LIMESTONE_KEY),
+                CountPlacementModifier.of(10),  //每个区块尝试 10 次（铅矿为 20）
+                SquarePlacementModifier.of(),   //水平扩散
+                HeightRangePlacementModifier.trapezoid(
+                        YOffset.fixed(20),         //最低 Y=20
+                        YOffset.fixed(80)          //最高 Y=80
+                ),
+                BiomePlacementModifier.of());
     }
 
     public static RegistryKey<PlacedFeature> of(String id) {
-        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of("industrial-revolution-mahiro76", id));//Identifier 的第一个参数必须是你的 mod id（比如 mahiro76），这样生成的 json 文件才会放在 data/mahiro76/worldgen/... 目录下。
+        return RegistryKey.of(RegistryKeys.PLACED_FEATURE, Identifier.of(Mahiro.MOD_ID, id));
     }
 
     public static void register(

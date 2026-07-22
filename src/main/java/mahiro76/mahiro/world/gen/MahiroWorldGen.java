@@ -22,6 +22,11 @@ public class MahiroWorldGen {
                     GenerationStep.Feature.UNDERGROUND_ORES,
                     MahiroPlacedFeatures.LEAD_ORE_PLACED_KEY
             );
+            BiomeModifications.addFeature(
+                    BiomeSelectors.foundInOverworld(),
+                    GenerationStep.Feature.UNDERGROUND_ORES,
+                    MahiroPlacedFeatures.LIMESTONE_PLACED_KEY
+            );
         }
     }
 }

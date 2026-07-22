@@ -1,5 +1,6 @@
 package mahiro76.mahiro.world.features;
 
+import mahiro76.mahiro.Mahiro;
 import mahiro76.mahiro.registry.MahiroBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -18,6 +19,7 @@ public class MahiroConfiguredFeatures {
 
     public static final RegistryKey<ConfiguredFeature<?, ?>> ORANGE_BUSH_BLOCK_KEY = of("orange_bush_block");
     public static final RegistryKey<ConfiguredFeature<?, ?>> LEAD_ORE_KEY = of("lead_ore");
+    public static final RegistryKey<ConfiguredFeature<?, ?>> LIMESTONE_KEY = of("limestone");
 
 
     public static void bootstrap(Registerable<ConfiguredFeature<?, ?>> featureRegisterable){
@@ -36,10 +38,20 @@ public class MahiroConfiguredFeatures {
                         ),
                         9  //矿脉大小（与铁矿石一致）
                 ));
+
+        //石灰石生成——仅替换纯石头（不替换花岗岩、深板岩等），概率低于铅矿
+        RuleTest stoneOnlyReplaceables = new BlockMatchRuleTest(Blocks.STONE);
+        register(featureRegisterable, LIMESTONE_KEY, Feature.ORE,
+                new OreFeatureConfig(
+                        java.util.List.of(
+                                OreFeatureConfig.createTarget(stoneOnlyReplaceables, MahiroBlocks.LIMESTONE.getDefaultState())
+                        ),
+                        4  //矿脉大小（小于铅矿的9）
+                ));
     }
 
     public static RegistryKey<ConfiguredFeature<?, ?>> of(String id) {
-        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of("industrial-revolution-mahiro76", id));//Identifier 的第一个参数必须是你的 mod id（比如 mahiro76），这样生成的 json 文件才会放在 data/mahiro76/worldgen/... 目录下。
+        return RegistryKey.of(RegistryKeys.CONFIGURED_FEATURE, Identifier.of(Mahiro.MOD_ID, id));
     }
 
     public static <FC extends FeatureConfig, F extends Feature<FC>> void register(
