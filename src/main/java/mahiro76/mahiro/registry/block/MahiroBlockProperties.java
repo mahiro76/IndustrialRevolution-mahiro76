@@ -16,27 +16,31 @@ import net.minecraft.state.property.IntProperty;
  * <pre>{@code
  * public class MyMachineBlock extends Block {
  *
+ *     // 第 0 步：在方块类中声明自己的 ENERGY 属性并设定最大等级
+ *     private static final IntProperty ENERGY = MahiroBlockProperties.energyProperty(7);
+ *
  *     public MyMachineBlock(Settings settings) {
  *         super(settings);
  *         // 第 1 步：在构造函数中设置默认状态
  *         setDefaultState(getStateManager().getDefaultState()
  *             .with(MahiroBlockProperties.POWERED, false)
- *             .with(MahiroBlockProperties.ENERGY, 0));
+ *             .with(ENERGY, 0));
  *     }
  *
  *     // 第 2 步：在 appendProperties 中注册属性
  *     @Override
  *     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
- *         builder.add(MahiroBlockProperties.POWERED, MahiroBlockProperties.ENERGY);
+ *         builder.add(MahiroBlockProperties.POWERED, ENERGY);
  *     }
  *
  *     // 第 3 步：在逻辑中读写属性
  *     public void someTickMethod(BlockState state, World world, BlockPos pos) {
  *         boolean isPowered = state.get(MahiroBlockProperties.POWERED);
- *         int energy = state.get(MahiroBlockProperties.ENERGY);
+ *         int energy = state.get(ENERGY);
  *
- *         if (energy < MahiroBlockProperties.MAX_ENERGY) {
- *             world.setBlockState(pos, state.with(MahiroBlockProperties.ENERGY, energy + 1));
+ *         int max = ((IntProperty) ENERGY).getValues().size() - 1;  // 或直接在类里存个常量
+ *         if (energy < max) {
+ *             world.setBlockState(pos, state.with(ENERGY, energy + 1));
  *         }
  *     }
  * }
@@ -45,23 +49,24 @@ import net.minecraft.state.property.IntProperty;
  * <h2>属性值范围说明</h2>
  * <ul>
  *   <li><b>{@link #POWERED}</b> — {@code true} 表示方块在供电范围内，{@code false} 表示不在。</li>
- *   <li><b>{@link #ENERGY}</b> — 取值范围 0（无电能）到 {@value #MAX_ENERGY}（满电能），共 16 级。
- *       方块状态是 {@link Minecraft#STATE_COUNT 有限枚举}，
- *       每个 unique 值组合会生成独立的 BlockState 实例。因此 ENERGY 不宜设太大范围。
- *       如需精细到个位数的电量数值，应存储在 BlockEntity 的 NBT 中，ENERGY 仅作为渲染和快速逻辑判断的等级。</li>
+ *   <li><b>{@link #energyProperty(int)}</b> — 方块使用此方法创建自己的 ENERGY 属性，并设定最大等级。
+ *       方块状态是有限枚举，等级数过多会指数膨胀 BlockState 实例。
+ *       精细电量应存储在 BlockEntity 的 NBT 中，ENERGY 仅作为渲染和快速逻辑判断的等级。</li>
  * </ul>
  *
  * <h2>配合 BlockEntity 的典型模式</h2>
  * <pre>{@code
  * public class MyMachineBlockEntity extends BlockEntity {
- *     private int storedEnergy;     // 精细电量（0~10000），存 NBT
+ *     private int storedEnergy;        // 精细电量（0~10000），存 NBT
+ *     private final int energyMaxLevel; // 从对应方块类获取最大等级
  *
  *     // 每 tick 将精细电量同步到方块状态（仅当等级改变时）
- *     public void syncEnergyToState() {
- *         int level = (int) Math.round(storedEnergy / 10000.0 * MahiroBlockProperties.MAX_ENERGY);
+ *     public void syncEnergyToState(IntProperty energyProp) {
+ *         int max = energyProp.getValues().size() - 1;
+ *         int level = (int) Math.round(storedEnergy / 10000.0 * max);
  *         BlockState state = world.getBlockState(pos);
- *         if (state.get(MahiroBlockProperties.ENERGY) != level) {
- *             world.setBlockState(pos, state.with(MahiroBlockProperties.ENERGY, level));
+ *         if (state.get(energyProp) != level) {
+ *             world.setBlockState(pos, state.with(energyProp, level));
  *         }
  *     }
  * }
@@ -69,11 +74,11 @@ import net.minecraft.state.property.IntProperty;
  *
  * <h2>资源文件（blockstates JSON）注意事项</h2>
  * <p>
- * 如果方块同时使用了 {@code POWERED}（2 种值）和 {@code ENERGY}（{@value #MAX_ENERGY} + 1 = 16 种值），
- * 则 blockstates JSON 需要覆盖 2 × 16 = 32 种组合。建议以下几种策略：
+ * 如果方块同时使用了 {@code POWERED}（2 种值）和一个 {@code energy} 属性（N 种值），
+ * 则 blockstates JSON 需要覆盖 2 × N 种组合。建议以下几种策略：
  * </p>
  * <ol>
- *   <li><b>完整枚举</b> — blockstate JSON 中列出所有 32 个 variants，各指向不同模型。
+ *   <li><b>完整枚举</b> — blockstate JSON 中列出所有组合的 variants，各指向不同模型。
  *       适合模型数不多的情况。</li>
  *   <li><b>用 {@code multipart} 或 BlockEntityModel</b> — 通过 BlockEntity 的
  *       {@code getModelData()} 返回自定义模型数据，配合 {@code BlockEntityModel} 实现
@@ -107,31 +112,28 @@ public class MahiroBlockProperties {
     public static final BooleanProperty POWERED = BooleanProperty.of("powered");
 
     /**
-     * 已存储电能的最大等级（含）。
+     * 创建一个名为 {@code "energy"}、范围 0 ~ {@code max}（含）的电能等级属性。
      * <p>
-     * 当前值为 15，即 ENERGY 的取值范围为 0 ~ 15，共 16 级。
-     * 如需调整等级数量，只需修改此常量即可——ENERGY 属性会自动使用新值。
-     */
-    public static final int MAX_ENERGY = 15;
-
-    /**
-     * 已存储电能的等级（0 ~ {@value #MAX_ENERGY}）。
-     * <p>
-     * 表示方块内部存储的电能等级，值越大代表电量越足。
-     * 属性名在 blockstate JSON 和调试屏幕中显示为 {@code "energy"}。
-     * <p>
-     * 读写示例：
+     * 每个方块可设定自己的最大能量等级，而不影响其他方块：
      * <pre>{@code
-     * // 读取当前电量等级
-     * int level = state.get(MahiroBlockProperties.ENERGY);
+     * // 青铜储电箱：最大 7 级
+     * private static final IntProperty ENERGY =
+     *     MahiroBlockProperties.energyProperty(7);
      *
-     * // 设置电量等级（生成新的 BlockState，不会改变原对象）
-     * BlockState newState = state.with(MahiroBlockProperties.ENERGY, 10);
+     * // 高级储电箱：最大 31 级
+     * private static final IntProperty ENERGY =
+     *     MahiroBlockProperties.energyProperty(31);
      * }</pre>
+     * <p>
+     * <b>注意：</b>方块状态是有限枚举，每增加一级都会指数膨胀 BlockState 实例数。
+     * 精细电量应存储在 BlockEntity NBT 中，ENERGY 仅用作渲染和快速判断的等级刻度。
      *
-     * @see #MAX_ENERGY
+     * @param max 最大等级值（含），必须 &ge; 0
+     * @return 以 {@code "energy"} 命名的 IntProperty
      */
-    public static final IntProperty ENERGY = IntProperty.of("energy", 0, MAX_ENERGY);
+    public static IntProperty energyProperty(int max) {
+        return IntProperty.of("energy", 0, max);
+    }
 
     /**
      * 私有构造器，防止实例化。
