@@ -83,7 +83,9 @@ public class MahiroBlocks {
         );
     }
 
-
+    /**
+     *{@link #registerBlockItems(String, Block)}与{@link #register(String, Block)}方法的作用是注册方块和方块物品。
+     */
     //方块物品注册方法（在注册方块的同时注册方块物品）
     public static void registerBlockItems(String id,Block block){
         Item item = Registry.register(Registries.ITEM, Identifier.of(Mahiro.MOD_ID, id), new BlockItem(block, new Item.Settings()));
