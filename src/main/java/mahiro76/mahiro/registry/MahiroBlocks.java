@@ -17,13 +17,15 @@ import net.minecraft.util.Identifier;
 
 public class MahiroBlocks {
     //在下方添加物品
-    public static Block LIMESTONE = register("limestone", new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.STONE)));
+    //石灰石
+    public static Block LIMESTONE = register("limestone", new Block(AbstractBlock.Settings.copy(Blocks.STONE)));
 
     //铅矿
     public static final Block LEAD_ORE = register("lead_ore",
-            new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.IRON_ORE)));
+            new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE)));
     public static final Block DEEPSLATE_LEAD_ORE = register("deepslate_lead_ore",
-            new Block(AbstractBlock.Settings.copy(net.minecraft.block.Blocks.DEEPSLATE_IRON_ORE)));
+            new Block(AbstractBlock.Settings.copy(Blocks.DEEPSLATE_IRON_ORE)));
+    //橙子灌木
     public static final Block ORANGE_BUSH_BLOCK = register(
             "orange_block",
             new OrangeBushBlock(
@@ -88,8 +90,6 @@ public class MahiroBlocks {
                         .blockVision(Blocks::never)
         );
     }
-
-    public static final Block LEAD_ORE = register("lead_ore", new Block(AbstractBlock.Settings.copy(Blocks.IRON_ORE)));
 
     /**
      *{@link #registerBlockItems(String, Block)}与{@link #register(String, Block)}方法的作用是注册方块和方块物品。
