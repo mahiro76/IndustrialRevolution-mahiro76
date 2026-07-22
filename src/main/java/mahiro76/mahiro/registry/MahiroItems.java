@@ -28,6 +28,11 @@ public class MahiroItems {
     //铅锭
     public static final Item LEAD_INGOT = registerItem("lead_ingot", new LeadIngot(new Item.Settings()));
 
+    //添加粗铅
+    public static final Item RAW_LEAD = registerItem("raw_lead", new Item(new Item.Settings()));
+    //添加铅锭
+    public static final Item LEAD_INGOT = registerItem("lead_ingot", new Item(new Item.Settings()));
+
 
     //添加物品辅助方法
     public static <T extends Item> T registerItem(String name, T item) {

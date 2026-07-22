@@ -30,6 +30,8 @@ public class MahiroItemGroup {
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroItems.HARDENER);
                         entries.add(MahiroItems.GLOWPOWDER);
+                        entries.add(MahiroItems.RAW_LEAD);
+                        entries.add(MahiroItems.LEAD_INGOT);
 
                     }).build());
 
@@ -41,6 +43,8 @@ public class MahiroItemGroup {
                     .icon(() -> new ItemStack(MahiroBlocks.LIMESTONE))
                     .entries((displayContext, entries) -> {
                         entries.add(MahiroBlocks.LIMESTONE);
+                        entries.add(MahiroBlocks.LEAD_ORE);
+                        entries.add(MahiroBlocks.DEEPSLATE_LEAD_ORE);
 
                     }).build());
 
